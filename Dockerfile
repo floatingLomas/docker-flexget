@@ -7,4 +7,5 @@ RUN mkdir -p /root/.flexget \
 
 VOLUME ["/root/.flexget"]
 
-CMD ["/usr/local/bin/flexget", "--loglevel", "info", "daemon", "start"]
+COPY entrypoint.sh /entrypoint.sh
+CMD ["/entrypoint.sh"]
